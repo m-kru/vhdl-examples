@@ -1,0 +1,18 @@
+CAPI=2:
+
+name: ::alias_for_lib
+
+filesets:
+  tb_adders:
+    files:
+      - tb_adders.vhd
+    file_type: vhdlSource-2008
+    depend:
+      - :lib1:adder
+
+targets:
+  tb_adders:
+    default_tool: ghdl
+    toplevel: tb_adders
+    filesets:
+      - tb_adders

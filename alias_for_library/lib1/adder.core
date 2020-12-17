@@ -1,0 +1,15 @@
+CAPI=2:
+
+name: :lib1:adder
+
+filesets:
+  rtl:
+    files:
+      - adder.vhd
+    file_type: vhdlSource-93
+    logical_name: lib1
+
+targets:
+  default:
+    filesets:
+      - rtl
