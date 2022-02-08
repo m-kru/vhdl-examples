@@ -1,4 +1,4 @@
-If you want to connect instance of some entity of based on generic value this is the proper way:
+If you want to connect instance of some entity based on a generic value, this is the proper way:
 
 ```vhdl
 generate_label_0: if USE_D_OUTPUT generate
