@@ -21,11 +21,11 @@ begin
     clk <= not clk after CLK_PERIOD/2;
 
     my_reg_1 : entity work.my_reg
-    generic map (WIDTH => my_rec_2_slv(s_d)'length)
+    generic map (WIDTH => to_slv(s_d)'length)
     port map (
         clk => clk,
-        d   => my_rec_2_slv(s_d),
-        slv_2_my_rec(q)   => s_q
+        d   => to_slv(s_d),
+        to_my_rec(q)   => s_q
     );
 
     main: process

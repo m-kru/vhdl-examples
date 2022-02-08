@@ -17,7 +17,7 @@ architecture rtl of cnt is
 
 begin
 
-    process(clk)
+    process (clk) is
         variable value_cnt : unsigned(LEN downto 0) := (others => '0');
     begin
         if rising_edge(clk) then

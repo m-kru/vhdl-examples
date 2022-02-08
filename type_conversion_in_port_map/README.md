@@ -1,5 +1,6 @@
 1. Casting is always on the driver side.
    Example:
+```vhdl
    adder_0 : entity work.adder
    port map (
      clk    => clk,
@@ -10,6 +11,7 @@
      un     => unsigned(s_un),
      std_logic_vector(sum) => s_sum
    );
+```
 
  un is module input, s_un is driving signal.
  sum is module output that drives signal s_sum.
@@ -19,6 +21,8 @@
 3. Signal of type std_logic_vector(0 downto 0)
    can not be assigned to signal of type std_logic.
    The assignment has to be done in following way:
+```vhdl
    sl <= slv(0);
    or in case of casting in port map:
    sl => slv(0).
+```

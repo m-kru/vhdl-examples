@@ -9,14 +9,14 @@ package my_pkg is
     c : std_logic_vector(3 downto 0);
   end record;
 
-  function my_rec_2_slv(x : t_my_record) return std_logic_vector;
-  function slv_2_my_rec(x : std_logic_vector) return t_my_record;
+  function to_slv(x : t_my_record) return std_logic_vector;
+  function to_my_rec(x : std_logic_vector) return t_my_record;
 
 end my_pkg;
 
 package body my_pkg is
 
-  function my_rec_2_slv(x : t_my_record) return std_logic_vector is
+  function to_slv(x : t_my_record) return std_logic_vector is
     variable var : std_logic_vector(5 downto 0);
   begin
     var(0 downto 0) := std_logic_vector(x.a);
@@ -26,7 +26,7 @@ package body my_pkg is
     return var;
   end function;
 
-  function slv_2_my_rec(x : std_logic_vector) return t_my_record is
+  function to_my_rec(x : std_logic_vector) return t_my_record is
     variable var : t_my_record;
   begin
     var.a := x(0 downto 0);

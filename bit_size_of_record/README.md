@@ -3,4 +3,4 @@ record type. However, it is doable with a function that transforms
 to the std_logic_vector type and predefined 'length attribute.
 
 Example:
-    generic map (WIDTH => my_rec_2_slv(s_d)'length)
+    `generic map (WIDTH => to_slv(s_d)'length)`
