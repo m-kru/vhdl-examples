@@ -1,5 +1,6 @@
 If you want to connect instance of some entity of based on generic value this is the proper way:
 
+```vhdl
 generate_label_0: if USE_D_OUTPUT generate
     design_0 : entity work.design
     port map (
@@ -19,8 +20,10 @@ else generate
         d_o  => open
     );
 end generate generate_label_0;
+```
 
 The following one is unfortunately not supported by VHDL.
+```vhdl
     design_0 : entity work.design
     port map (
         clk  => clk,
@@ -33,3 +36,4 @@ else generate
         d_o  => open
 end generate generate_label_1;
     );
+```
